@@ -1,31 +1,30 @@
-CC = CC
-FLAGS = -Wall -Wextra -Werror
+# Variables
+CFLAGS = -Wall -Wextra -Werror
+CC = cc
+SRCS = $(wildcard *.c)        # List all .c files in the directory
+HEADERFILE = libft.h
+OBJS = $(SRCS:.c=.o)          # Object files corresponding to source files
 
-SRCDER = *.c
-INDER = *.h
+NAME = libft.a                # The name of the static library
 
-SRC = $(SRCDER)/*.c
-OBj = $(SRC:$(SRCDIR)/%.c=$(SRCDER)/%.o)
-
-NAME = libft.a
-
+# Default target
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	ar rcs $@ $^
+# Rule to create the static library
+$(NAME): $(OBJS)
+	@ar rcs $@ $^
 
-$(SRCDER)/%.o: $(SRCDIR)/%.c $(INCDIR)/*.h | $(SRCDER)
-	$(CC) $(FLAGS) -I$(INCDIR) -c $< -o $@
+# Rule to compile .c files to .o files
+%.o: %.c $(HEADERFILE)
+	@$(CC) $(CFLAGS) -c $< -o $@
 
-$(OBJDIR):
-	mkdir -p $(SRCDIR)
-
+# Clean up build files
 clean:
-	rm -rf $(SRCDER)
+	rm -f $(NAME) $(OBJS)
 
+# Remove all build files and generated files
 fclean: clean
 	rm -f $(NAME)
 
+# Build everything from scratch
 re: fclean all
-
-.PHONY: all clean fclean re
