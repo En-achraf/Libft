@@ -1,35 +1,51 @@
 #include "libft.h"
 
-char *strchr(const char *s, int c) {
-    while (*s) {
-        if (*s == c)
-            return (char *)s;
+int its_set(char const s1, char const *s) {
+    while(*s) {
+        if(s1 == *s) {
+            return 1;
+        }
         s++;
     }
-    return NULL;
+    return 0;
 }
 
-int ft_strlen(char *str) {
-    int i;
-    i = 0;
-    while (*str++)
+int len(char const *str) {
+    int i = 0;
+    while (str[i]) {
         i++;
+    }
     return i;
 }
 
 char *ft_strtrim(char const *s1, char const *set) {
     int i;
-    int j;
+    int start;
+    int end;
     char *str;
-    i =  0;
-    j  = 0;
-    str = malloc(sizeof(char) *ft_strlen(s1) + 1);
-    if(!str)
+
+    start = 0;
+    end = len(s1);
+
+    while (s1[start] && its_set(s1[start], set)) {
+        start++;
+    }
+
+    while (end > start && its_set(s1[end - 1], set)) {
+        end--;
+    }
+
+    str = malloc(sizeof(char) * (end - start + 1));
+    if (!str)
         return NULL;
-    while(s1[i] && strchr(set, s1[i]))
+
+    i = 0;
+    while (start < end) {
+        str[i] = s1[start];
         i++;
-    while(s1[i] && s1[i])    
-        str[j++] = s1[i++];
-    str[j] = '\0';
+        start++;
+    }
+    str[i] = '\0';
+
     return str;
 }
