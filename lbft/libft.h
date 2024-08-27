@@ -16,5 +16,7 @@ int ft_atoi(const char *str);
 int ft_isdigit(int c);
 int ft_isalpha(int c);
 int ft_isalnum(int c);
+char *ft_itoa(int n);
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif
