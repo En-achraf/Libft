@@ -1,5 +1,4 @@
 #include "libft.h"
-#include <stdlib.h>
 
 static int NumLen(int n) {
     int count;
