@@ -17,11 +17,12 @@ int ft_atoi(const char *str);
 int ft_isdigit(int c);
 int ft_isalpha(int c);
 int ft_isalnum(int c);
+int ft_isascii(int c);
+int ft_isprint(int c);
 char *ft_itoa(int n);
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void ft_putendl_fd(char *s, int fd);
 void ft_striteri(char *s, void (*f)(unsigned int, char*));
 void *calloc(size_t nitems, size_t size);
-char * strdup( const char *s);
 
 #endif
