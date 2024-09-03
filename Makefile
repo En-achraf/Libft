@@ -20,7 +20,7 @@ $(NAME): $(OBJS)
 
 # Clean up build files
 clean:
-	rm -f $(NAME) $(OBJS)
+	rm -f $(OBJS)
 
 # Remove all build files and generated files
 fclean: clean
