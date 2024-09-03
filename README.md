@@ -1,3 +1,3 @@
-<h1 align="center">C_Cursus💻</h1> 
+<h1 align="center">Libft💻</h1> 
 
-<p align="center">This repository contains all projects of  1337 C_Cursus 💻</p>
+<p align="center">I will add More info about this project soon.....</p>
