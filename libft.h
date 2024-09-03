@@ -26,6 +26,5 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void ft_putendl_fd(char *s, int fd);
 void ft_striteri(char *s, void (*f)(unsigned int, char*));
 void *ft_calloc(size_t nitems, size_t size);
-char *strchr(const char *s, int c);
 
 #endif
