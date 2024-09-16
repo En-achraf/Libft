@@ -2,9 +2,9 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned const char *str1;
-	unsigned const char *str2;
-	size_t i;
+	unsigned const char	*str1;
+	unsigned const char	*str2;
+	size_t				i;
 
 	str1 = (unsigned const char *)s1;
 	str2 = (unsigned const char *)s2;
@@ -15,6 +15,5 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 			return (str1[i] - str2[i]);
 		i++;
 	}
-
 	return (0);
 }

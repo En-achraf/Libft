@@ -2,7 +2,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int nb;
+	unsigned int	nb;
 
 	nb = n;
 	if (n < 0)
@@ -10,7 +10,6 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd('-', 1);
 		nb = -nb;
 	}
-
 	if (nb < 10)
 	{
 		ft_putchar_fd(nb + '0', fd);

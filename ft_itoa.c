@@ -1,6 +1,6 @@
 #include "libft.h"
 
-static int	NumLen(int n)
+static int	numlen(int n)
 {
 	int	count;
 
@@ -22,19 +22,8 @@ static int	NumLen(int n)
 	return (count);
 }
 
-char	*ft_itoa(int n)
+static void	ft_fill(char *str, int len, int sign, int n)
 {
-	int		sign;
-	char	*str;
-	int		len;
-
-	len = NumLen(n);
-	str = malloc(sizeof(char) * (len + 1));
-	if (!str)
-	{
-		return (NULL);
-	}
-	sign = 0;
 	if (n < 0)
 	{
 		sign = 1;
@@ -57,5 +46,19 @@ char	*ft_itoa(int n)
 	{
 		str[0] = '-';
 	}
+}
+
+char	*ft_itoa(int n)
+{
+	int		sign;
+	char	*str;
+	int		len;
+
+	len = numlen(n);
+	str = malloc(sizeof(char) * (len + 1));
+	sign = 0;
+	if (!str)
+		return (NULL);
+	ft_fill(str, len, sign, n);
 	return (str);
 }
