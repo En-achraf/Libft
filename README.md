@@ -1,76 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2, h3 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+    h1 {
+        text-align: center;
+        font-size: 2.5em;
+        color: #0073e6;
+    }
+    p {
+        line-height: 1.6;
+    }
+    .code {
+        background-color: #f1f1f1;
+        padding: 10px;
+        border-left: 4px solid #0073e6;
+        margin-bottom: 20px;
+        white-space: pre-wrap;
+        font-family: monospace;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    ul li {
+        padding: 8px 0;
+    }
+    ul li::before {
+        content: '•';
+        color: #0073e6;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+    }
+    .title {
+        background-color: #0073e6;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+    .code-snippet {
+        background-color: #272822;
+        color: #f8f8f2;
+        padding: 15px;
+        border-radius: 8px;
+        font-family: monospace;
+        overflow-x: auto;
         }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2, h3 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-        h1 {
-            text-align: center;
-            font-size: 2.5em;
-            color: #0073e6;
-        }
-        p {
-            line-height: 1.6;
-        }
-        .code {
-            background-color: #f1f1f1;
-            padding: 10px;
-            border-left: 4px solid #0073e6;
-            margin-bottom: 20px;
-            white-space: pre-wrap;
-            font-family: monospace;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li {
-            padding: 8px 0;
-        }
-        ul li::before {
-            content: '•';
-            color: #0073e6;
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-        }
-        .title {
-            background-color: #0073e6;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-        .code-snippet {
-            background-color: #272822;
-            color: #f8f8f2;
-            padding: 15px;
-            border-radius: 8px;
-            font-family: monospace;
-            overflow-x: auto;
-        }
-        .highlight {
-            color: #0073e6;
-            font-weight: bold;
-        }
-    </style>
+    .highlight {
+        color: #0073e6;
+        font-weight: bold;
+    }
+</style>
 </head>
 <body>
     <div class="container">
