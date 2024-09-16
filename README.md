@@ -84,9 +84,8 @@ Table of Contents
 
 The bonus part of the Libft project introduces functions for manipulating linked lists. These functions enable you to create, modify, and manage lists efficiently.
 Functions
-ft_lstnew
 
-c
+ft_lstnew.c
 
 `t_list *ft_lstnew(void *content);`
 
@@ -97,9 +96,8 @@ Parameters:
     content: The data to be stored in the node.
 
 Returns: A pointer to the new node or NULL if the allocation fails.
-ft_lstadd_front
 
-c
+ft_lstadd_front.c
 
 `void ft_lstadd_front(t_list **lst, t_list *new);`
 
@@ -111,9 +109,8 @@ Parameters:
     new: The node to be added to the list.
 
 Returns: None.
-ft_lstsize
 
-c
+ft_lstsize.c
 
 `int ft_lstsize(t_list *lst);`
 
@@ -124,9 +121,8 @@ Parameters:
     lst: The beginning of the list.
 
 Returns: The number of nodes in the list.
-ft_lstlast
 
-c
+ft_lstlast.c
 
 `t_list *ft_lstlast(t_list *lst);`
 
@@ -137,9 +133,8 @@ Parameters:
     lst: The beginning of the list.
 
 Returns: The last node of the list.
-ft_lstadd_back
 
-c
+ft_lstadd_back.c
 
 `void ft_lstadd_back(t_list **lst, t_list *new);`
 
@@ -151,9 +146,8 @@ Parameters:
     new: The node to be added to the list.
 
 Returns: None.
-ft_lstdelone
 
-c
+ft_lstdelone.c
 
 `void ft_lstdelone(t_list *lst, void (*del)(void *));`
 
@@ -165,9 +159,8 @@ Parameters:
     del: The address of the function used to delete the content.
 
 Returns: None.
-ft_lstclear
 
-c
+ft_lstclear.c
 
 `void ft_lstclear(t_list **lst, void (*del)(void *));`
 
@@ -179,9 +172,8 @@ Parameters:
     del: The address of the function used to delete the content of the node.
 
 Returns: None.
-ft_lstiter
 
-c
+ft_lstiter.c
 
 `void ft_lstiter(t_list *lst, void (*f)(void *));`
 
@@ -193,9 +185,8 @@ Parameters:
     f: The address of the function used to iterate on the list.
 
 Returns: None.
-ft_lstmap
 
-c
+ft_lstmap.c
 
 `t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));`
 
