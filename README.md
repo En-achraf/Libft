@@ -1,72 +1,210 @@
-<!DOCTYPE html>
-<html lang="en">
-<body>
-    <div class="container">
-        <h1>Libft - Custom C Library</h1>
-        <div class="title">
-            <h2>Introduction</h2>
-        </div>
-        <p>
-            <span class="highlight">Libft</span> is a custom C library that contains implementations of commonly used functions in C. 
-            This library is designed to serve as a helpful toolkit for future projects in programming. The functions included in this library 
-            replicate standard C library functions with additional helpful features for building projects.
-        </p>
-        <div class="title">
-            <h2>Mandatory Part</h2>
-        </div>
-        <h3>Part 1 - Libc Functions</h3>
-        <p>These are re-implemented standard C library functions that follow the prototypes of the originals but with the prefix <span class="highlight">ft_</span>. No external libraries are used.</p>
-        <ul>
-            <li><span class="highlight">ft_isalpha</span> - Checks if the character is an alphabetic letter.</li>
-            <li><span class="highlight">ft_isdigit</span> - Checks if the character is a digit.</li>
-            <li><span class="highlight">ft_isalnum</span> - Checks if the character is a digit or letter.</li>
-            <li><span class="highlight">ft_strlen</span> - Calculates the length of a string.</li>
-            <li><span class="highlight">ft_memset</span> - Fills a block of memory with a specific byte.</li>
-            <!-- Add more items as needed -->
-        </ul>
-        <h3>Part 2 - Additional Functions</h3>
-        <ul>
-            <li><span class="highlight">ft_substr</span> - Extracts a substring from a string, starting at a specific index.</li>
-            <li><span class="highlight">ft_strjoin</span> - Concatenates two strings into a new string.</li>
-            <li><span class="highlight">ft_split</span> - Splits a string into an array of substrings using a delimiter.</li>
-            <li><span class="highlight">ft_itoa</span> - Converts an integer into a string.</li>
-        </ul>
-        <div class="title">
-            <h2>Bonus Part - Linked List Functions</h2>
-        </div>
-        <p>The following additional functions help with linked list operations. A linked list consists of nodes where each node contains data and a pointer to the next node.</p>
+# Libft - Your Own C Library
 
-        <div class="code">
-<pre>
-typedef struct s_list {
+## Introduction
+
+Libft is a custom C library that contains implementations of commonly used functions in C. This library serves as a useful toolkit for future projects at school. The functions included in this library are inspired by standard C library functions, with some additional useful functions to build your projects.
+
+## Mandatory Part
+
+### Part 1 - Libc Functions
+
+These are the re-implemented standard C library functions that follow the prototypes of the originals but with the prefix `ft_`. They do not require any external libraries.
+
+- **`ft_isalpha`**: Checks if the character is an alphabetic letter.
+- **`ft_isdigit`**: Checks if the character is a digit.
+- **`ft_isalnum`**: Checks if the character is either a digit or an alphabetic letter.
+- **`ft_isascii`**: Checks if the character is in the ASCII table.
+- **`ft_isprint`**: Checks if the character is printable.
+- **`ft_strlen`**: Calculates the length of a string.
+- **`ft_memset`**: Fills a block of memory with a specified byte.
+- **`ft_bzero`**: Sets all bytes in a memory block to zero.
+- **`ft_memcpy`**: Copies a memory block to another.
+- **`ft_memmove`**: Copies memory regions that might overlap.
+- **`ft_strlcpy`**: Copies a string to a destination buffer, ensuring null-termination.
+- **`ft_strlcat`**: Concatenates two strings, ensuring null-termination.
+- **`ft_toupper`**: Converts lowercase letters to uppercase.
+- **`ft_tolower`**: Converts uppercase letters to lowercase.
+- **`ft_strchr`**: Locates the first occurrence of a character in a string.
+- **`ft_strrchr`**: Locates the last occurrence of a character in a string.
+- **`ft_strncmp`**: Compares two strings up to a specified number of characters.
+- **`ft_memchr`**: Searches for a byte in a memory block.
+- **`ft_memcmp`**: Compares two blocks of memory.
+- **`ft_strnstr`**: Locates the first occurrence of a substring in a string, with a size limit.
+- **`ft_atoi`**: Converts a string to an integer.
+- **`ft_calloc`**: Allocates memory and initializes it to zero.
+- **`ft_strdup`**: Duplicates a string using dynamic memory allocation.
+
+### Part 2 - Additional Functions
+
+These functions are not part of the standard library but are useful for string and memory manipulation.
+
+- **`ft_substr`**: Extracts a substring from a string, starting at a given index with a specified length.
+- **`ft_strjoin`**: Concatenates two strings into a new string.
+- **`ft_strtrim`**: Removes specified characters from the beginning and the end of a string.
+- **`ft_split`**: Splits a string into an array of substrings, separated by a given delimiter.
+- **`ft_itoa`**: Converts an integer to its string representation.
+- **`ft_strmapi`**: Applies a function to each character of a string, passing its index as the first argument.
+- **`ft_striteri`**: Iterates over each character of a string and applies a function to each character.
+- **`ft_putchar_fd`**: Outputs a character to the specified file descriptor.
+- **`ft_putstr_fd`**: Outputs a string to the specified file descriptor.
+- **`ft_putendl_fd`**: Outputs a string followed by a newline to the specified file descriptor.
+- **`ft_putnbr_fd`**: Outputs an integer to the specified file descriptor.
+
+## Bonus Part - Linked List Functions
+
+These additional functions handle linked list operations. A linked list is a data structure that consists of nodes, where each node contains data and a pointer to the next node.
+
+The list node structure:
+
+```c
+typedef struct s_list
+{
     void            *content;
     struct s_list   *next;
 } t_list;
-</pre>
- </div>
-        <ul>
-            <li><span class="highlight">ft_lstnew</span> - Creates a new list node.</li>
-            <li><span class="highlight">ft_lstadd_front</span> - Adds a node at the beginning of the list.</li>
-            <li><span class="highlight">ft_lstsize</span> - Counts the number of nodes in the list.</li>
-            <li><span class="highlight">ft_lstlast</span> - Returns the last node in the list.</li>
-        </ul>
-        <div class="title">
-            <h2>Usage Instructions</h2>
-        </div>
-        <p>To compile the library and generate <span class="highlight">libft.a</span>:</p>
-        <div class="code-snippet">make</div>
-        <p>To compile your project with <span class="highlight">libft</span>, link it like this:</p>
-        <div class="code-snippet">
-gcc -Wall -Wextra -Werror -L. -lft your_file.c -o your_program
-    </div>
-        <div class="title">
-            <h2>Memory Management</h2>
-        </div>
-        <p>Remember to free memory allocated by functions like <span class="highlight">ft_substr</span>, <span class="highlight">ft_strdup</span>, and others to avoid memory leaks.</p>
-        <div class="title">
-            <h2>License</h2>
-        </div>
-        <p>This project is licensed under the MIT License.</p>
-    </div>
-</body>
-</html>
+```
+### Libft Bonus Functions
+
+This README covers the bonus functions implemented for the Libft project. These functions extend the basic functionality of the library to include operations on linked lists.
+Table of Contents
+
+   ## Introduction
+# Functions
+- **`ft_lstnew`
+- **`ft_lstadd_front`
+- **`ft_lstsize`
+- **`ft_lstlast`
+- **`ft_lstadd_back`
+- **`ft_lstdelone`
+- **`ft_lstclear`
+- **`ft_lstiter`
+- **`ft_lstmap
+
+## Introduction
+
+The bonus part of the Libft project introduces functions for manipulating linked lists. These functions enable you to create, modify, and manage lists efficiently.
+Functions
+ft_lstnew
+
+c
+
+t_list *ft_lstnew(void *content);
+
+## Description: Allocates (with malloc(3)) and returns a new node. The content member is initialized with the value of the parameter content. The next member is initialized to NULL.
+
+Parameters:
+
+    content: The data to be stored in the node.
+
+Returns: A pointer to the new node or NULL if the allocation fails.
+ft_lstadd_front
+
+c
+
+void ft_lstadd_front(t_list **lst, t_list *new);
+
+## Description: Adds the node new at the beginning of the list.
+
+Parameters:
+
+    lst: The address of a pointer to the first link of a list.
+    new: The node to be added to the list.
+
+Returns: None.
+ft_lstsize
+
+c
+
+int ft_lstsize(t_list *lst);
+
+## Description: Counts the number of nodes in a list.
+
+Parameters:
+
+    lst: The beginning of the list.
+
+Returns: The number of nodes in the list.
+ft_lstlast
+
+c
+
+t_list *ft_lstlast(t_list *lst);
+
+## Description: Returns the last node of the list.
+
+Parameters:
+
+    lst: The beginning of the list.
+
+Returns: The last node of the list.
+ft_lstadd_back
+
+c
+
+void ft_lstadd_back(t_list **lst, t_list *new);
+
+## Description: Adds the node new at the end of the list.
+
+Parameters:
+
+    lst: The address of a pointer to the first link of the list.
+    new: The node to be added to the list.
+
+Returns: None.
+ft_lstdelone
+
+c
+
+void ft_lstdelone(t_list *lst, void (*del)(void *));
+
+## Description: Takes as a parameter a node and frees the memory of the node’s content using the function del and frees the node itself. The memory of next must not be freed.
+
+Parameters:
+
+    lst: The node to free.
+    del: The address of the function used to delete the content.
+
+Returns: None.
+ft_lstclear
+
+c
+
+void ft_lstclear(t_list **lst, void (*del)(void *));
+
+## Description: Deletes and frees the given node and every successor of that node, using the function del and free(3). The pointer to the list must be set to NULL.
+
+Parameters:
+
+    lst: The address of a pointer to a node.
+    del: The address of the function used to delete the content of the node.
+
+Returns: None.
+ft_lstiter
+
+c
+
+void ft_lstiter(t_list *lst, void (*f)(void *));
+
+## Description: Iterates the list lst and applies the function f on the content of each node.
+
+Parameters:
+
+    lst: The address of a pointer to a node.
+    f: The address of the function used to iterate on the list.
+
+Returns: None.
+ft_lstmap
+
+c
+
+t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+## Description: Iterates the list lst and applies the function f on the content of each node. Creates a new list resulting from the successive applications of the function f. The del function is used to delete the content of a node if needed.
+
+Parameters:
+
+    lst: The address of a pointer to a node.
+    f: The address of the function used to iterate on the list.
+    del: The address of the function used to delete the content of a node if needed.
+
+Returns: The new list or NULL if the allocation fails.
