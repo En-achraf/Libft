@@ -85,7 +85,7 @@ Table of Contents
 The bonus part of the Libft project introduces functions for manipulating linked lists. These functions enable you to create, modify, and manage lists efficiently.
 Functions
 
-ft_lstnew.c
+# ft_lstnew.c
 
 `t_list *ft_lstnew(void *content);`
 
@@ -97,7 +97,7 @@ Parameters:
 
 Returns: A pointer to the new node or NULL if the allocation fails.
 
-ft_lstadd_front.c
+# ft_lstadd_front.c
 
 `void ft_lstadd_front(t_list **lst, t_list *new);`
 
