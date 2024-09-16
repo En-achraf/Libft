@@ -78,7 +78,7 @@ Table of Contents
 - **`ft_lstdelone`
 - **`ft_lstclear`
 - **`ft_lstiter`
-- **`ft_lstmap
+- **`ft_lstmap`
 
 ## Introduction
 
@@ -88,7 +88,7 @@ ft_lstnew
 
 c
 
-t_list *ft_lstnew(void *content);
+## t_list *ft_lstnew(void *content);
 
 ## Description: Allocates (with malloc(3)) and returns a new node. The content member is initialized with the value of the parameter content. The next member is initialized to NULL.
 
@@ -101,7 +101,7 @@ ft_lstadd_front
 
 c
 
-void ft_lstadd_front(t_list **lst, t_list *new);
+## void ft_lstadd_front(t_list **lst, t_list *new);
 
 ## Description: Adds the node new at the beginning of the list.
 
@@ -115,7 +115,7 @@ ft_lstsize
 
 c
 
-int ft_lstsize(t_list *lst);
+## int ft_lstsize(t_list *lst);
 
 ## Description: Counts the number of nodes in a list.
 
@@ -128,7 +128,7 @@ ft_lstlast
 
 c
 
-t_list *ft_lstlast(t_list *lst);
+## t_list *ft_lstlast(t_list *lst);
 
 ## Description: Returns the last node of the list.
 
@@ -141,7 +141,7 @@ ft_lstadd_back
 
 c
 
-void ft_lstadd_back(t_list **lst, t_list *new);
+## void ft_lstadd_back(t_list **lst, t_list *new);
 
 ## Description: Adds the node new at the end of the list.
 
@@ -155,7 +155,7 @@ ft_lstdelone
 
 c
 
-void ft_lstdelone(t_list *lst, void (*del)(void *));
+## void ft_lstdelone(t_list *lst, void (*del)(void *));
 
 ## Description: Takes as a parameter a node and frees the memory of the node’s content using the function del and frees the node itself. The memory of next must not be freed.
 
@@ -169,7 +169,7 @@ ft_lstclear
 
 c
 
-void ft_lstclear(t_list **lst, void (*del)(void *));
+## void ft_lstclear(t_list **lst, void (*del)(void *));
 
 ## Description: Deletes and frees the given node and every successor of that node, using the function del and free(3). The pointer to the list must be set to NULL.
 
@@ -183,7 +183,7 @@ ft_lstiter
 
 c
 
-void ft_lstiter(t_list *lst, void (*f)(void *));
+## void ft_lstiter(t_list *lst, void (*f)(void *));
 
 ## Description: Iterates the list lst and applies the function f on the content of each node.
 
@@ -197,7 +197,7 @@ ft_lstmap
 
 c
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+## t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 ## Description: Iterates the list lst and applies the function f on the content of each node. Creates a new list resulting from the successive applications of the function f. The del function is used to delete the content of a node if needed.
 
