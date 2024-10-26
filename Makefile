@@ -1,30 +1,25 @@
-# Variables
-CFLAGS = -Wall -Wextra -Werror
 CC = cc
-SRCS = $(wildcard *.c)        # List all .c files in the directory
-HEADERFILE = libft.h
-OBJS = $(SRCS:.c=.o)          # Object files corresponding to source files
+CFLAGS = -Wall -Wextra -Werror
+SRCS = ft_isascii.c ft_lstnew.c ft_memset.c ft_strlen.c ft_toupper.c ft_bzero.c \
+ ft_isdigit.c ft_lstsize.c ft_strchr.c ft_isalnum.c ft_isprint.c \
+ ft_memcpy.c ft_strlcat.c ft_strrchr.c ft_isalpha.c ft_lstadd_front.c ft_memmove.c ft_strlcpy.c ft_tolower.c \
+ ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c
 
-NAME = libft.a                # The name of the static library
+OBJECTS = $(SRCS:.c=.o)
+NAME = libft.a
 
-# Default target
-all: $(NAME)
+all : $(NAME)
 
-# Rule to create the static library
-$(NAME): $(OBJS)
-	@ar rcs $@ $^
+$(NAME) : $(OBJECTS)
+	@ar rcs $(NAME) $(OBJECTS)
 
-# Rule to compile .c files to .o files
-%.o: %.c $(HEADERFILE)
-	@$(CC) $(CFLAGS) -c $< -o $@
+%.o: %.c
+	@$(CC) $(CFLAGS) -c $^ -o $@
 
-# Clean up build files
-clean:
-	rm -f $(OBJS)
+clean : 
+	@rm -rf $(OBJECTS)
 
-# Remove all build files and generated files
-fclean: clean
-	rm -f $(NAME)
+fclean : clean
+	@rm -rf $(NAME)
 
-# Build everything from scratch
-re: fclean all
+re : fclean all
