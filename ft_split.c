@@ -6,13 +6,13 @@
 /*   By: acennadi <acennadi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 21:35:42 by acennadi          #+#    #+#             */
-/*   Updated: 2024/11/01 15:36:32 by acennadi         ###   ########.fr       */
+/*   Updated: 2024/11/02 14:36:37 by acennadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_strlenv3(char *s, char set)
+static int	ft_strlenv3(const char *s, char set)
 {
 	int	count;
 
@@ -49,13 +49,12 @@ static int	count_word(const char *s, char c)
 	}
 	return (count);
 }
-static void cleaner(char **arr, size_t i)
+static char **clean(char **arr,int i)
 {
-    while (i > 0)
-    {
-        free(arr[--i]);
-    }
+	while (i > 0)
+		free(arr[i--]);
     free(arr);
+	return NULL;
 }
 
 char	**ft_split(char const *s, char c)
@@ -64,23 +63,23 @@ char	**ft_split(char const *s, char c)
 	int i;
 	int worlds;
 
-	i  = 0;
+	if(!s)
+		return NULL;
+	i = 0;
 	worlds = count_word(s, c);
-	*arr = malloc(sizeof(char) * (worlds + 1));
+	arr = malloc(sizeof(char *) * (worlds + 1));
 	if (!arr)
 		return (NULL);
 	while (i < worlds)
 	{
 		while (*s == c)
 			s++;
-		arr[i] = malloc(ft_strlenv3((char *)s, c) + 1);
+		arr[i] = malloc(ft_strlenv3(s, c) + 1);
 		if(!arr[i])
-		{
-			cleaner(arr,i);
-			return NULL;
-		}
-		ft_strlcpy(arr[i], s, ft_strlenv3((char *)s, c) + 1);
-		s += ft_strlenv3((char *)s, c);		
+			return (clean(arr, i));
+			
+		ft_strlcpy(arr[i], s, ft_strlenv3(s, c) + 1);
+		s += ft_strlenv3(s, c);		
 		i++;
 	}
 	arr[i] = NULL;
