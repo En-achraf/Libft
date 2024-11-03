@@ -6,14 +6,14 @@
 /*   By: acennadi <acennadi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 14:27:26 by acennadi          #+#    #+#             */
-/*   Updated: 2024/11/03 18:03:32 by acennadi         ###   ########.fr       */
+/*   Updated: 2024/11/03 18:05:49 by acennadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char)) {
-    int i;
+    unsigned int i;
     char *str;
 
     i = 0;
