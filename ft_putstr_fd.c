@@ -1,9 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: acennadi <acennadi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/04 05:37:17 by acennadi          #+#    #+#             */
+/*   Updated: 2024/11/04 05:37:19 by acennadi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
-{
-	while (*s)
-	{
-		write(fd, s++, 1);
-	}
+void ft_putstr_fd(char *s, int fd) {
+    if(!s)
+        return ;
+    write(fd, s, ft_strlen(s));
 }
