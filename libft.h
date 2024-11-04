@@ -6,7 +6,7 @@
 /*   By: acennadi <acennadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 21:35:12 by acennadi          #+#    #+#             */
-/*   Updated: 2024/11/04 05:36:15 by acennadi         ###   ########.fr       */
+/*   Updated: 2024/11/04 15:26:37 by acennadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 #include <stdlib.h>
+#include <unistd.h>
 
 typedef struct  s_list {
     void    *content;
