@@ -6,20 +6,22 @@
 /*   By: acennadi <acennadi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 21:25:53 by acennadi          #+#    #+#             */
-/*   Updated: 2024/10/26 21:25:54 by acennadi         ###   ########.fr       */
+/*   Updated: 2024/10/27 17:15:30 by acennadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strrchr(const char *s, int c) {
-    char *lst_one;
+#include "libft.h"
 
-    lst_one = 0;
-    while(*s) {
-        if(*s == (char)c)
-            lst_one = (char *)s;
-        s++;
-    }
-if(c == '\0')
-    return ((char *)s);
-return lst_one;
+char	*ft_strrchr(const char *s, int c)
+{
+	int	i;
+
+	i = ft_strlen(s);
+	while (i >= 0)
+	{
+		if (s[i] == (char)c)
+			return ((char *)(&s[i]));
+		i--;
+	}
+	return (NULL);
 }

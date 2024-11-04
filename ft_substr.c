@@ -6,7 +6,7 @@
 /*   By: acennadi <acennadi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 14:23:23 by acennadi          #+#    #+#             */
-/*   Updated: 2024/10/27 14:23:24 by acennadi         ###   ########.fr       */
+/*   Updated: 2024/10/27 15:09:56 by acennadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,19 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	char	*str;
+	size_t i;
+	char *str;
 
 	i = 0;
+	if (!s)
+		return (NULL);
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
+	if (ft_strlen(s + start) < len)
+		len = ft_strlen(s + start);
 	if (!(str = malloc(len + 1)))
 		return (NULL);
-	while (len > i)
+	while (i < len)
 	{
 		str[i] = s[start + i];
 		i++;

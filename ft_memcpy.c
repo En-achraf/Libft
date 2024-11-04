@@ -6,11 +6,13 @@
 /*   By: acennadi <acennadi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 21:25:38 by acennadi          #+#    #+#             */
-/*   Updated: 2024/10/26 21:25:39 by acennadi         ###   ########.fr       */
+/*   Updated: 2024/10/28 18:42:31 by acennadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
  void * ft_memcpy(void *dst, const void *src, size_t n) {
     unsigned char *s1;

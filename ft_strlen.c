@@ -6,7 +6,7 @@
 /*   By: acennadi <acennadi@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 21:25:51 by acennadi          #+#    #+#             */
-/*   Updated: 2024/10/26 21:25:52 by acennadi         ###   ########.fr       */
+/*   Updated: 2024/11/02 22:42:11 by acennadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ size_t ft_strlen(const char *s) {
     size_t i; 
 
     i = 0;
-    while(*s++)
+    while(s[i])
         i++;
     return (i); 
 }
