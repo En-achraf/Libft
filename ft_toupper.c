@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acennadi <acennadi@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: acennadi <acennadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 21:25:56 by acennadi          #+#    #+#             */
-/*   Updated: 2024/10/26 21:25:57 by acennadi         ###   ########.fr       */
+/*   Updated: 2024/11/04 18:05:26 by acennadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c) {
-    if(c >= 'a' && c <= 'z')
-        return (c - 32);
-    return c;
+int	ft_toupper(int c)
+{
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }

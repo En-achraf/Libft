@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acennadi <acennadi@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: acennadi <acennadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 18:54:32 by acennadi          #+#    #+#             */
-/*   Updated: 2024/10/28 21:00:35 by acennadi         ###   ########.fr       */
+/*   Updated: 2024/11/04 18:24:28 by acennadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str;
 
 	start = 0;
-	if(!s1 || !set)
+	if (!s1 || !set)
 		return (NULL);
 	end = ft_strlen(s1);
 	while (s1[start] && its_set(s1[start], set))

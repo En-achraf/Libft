@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acennadi <acennadi@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: acennadi <acennadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 21:27:48 by acennadi          #+#    #+#             */
-/*   Updated: 2024/10/26 21:27:49 by acennadi         ###   ########.fr       */
+/*   Updated: 2024/11/04 18:05:28 by acennadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c) {
-    if(c >= 'A' && c <= 'Z')
-        return (c + 32);
-    return c;
+int	ft_tolower(int c)
+{
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }

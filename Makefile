@@ -27,7 +27,7 @@ bonus : $(BONUSOBJECT)
 	@ar rcs $(NAME)  $(BONUSOBJECT)
 
 clean :
-	@rm -rf $(OBJECTS)
+	@rm -rf $(OBJECTS) $(BONUSOBJECT)
 
 fclean : clean
 	@rm -rf $(NAME)

@@ -6,13 +6,14 @@
 /*   By: acennadi <acennadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 05:37:07 by acennadi          #+#    #+#             */
-/*   Updated: 2024/11/04 15:33:15 by acennadi         ###   ########.fr       */
+/*   Updated: 2024/11/04 18:06:18 by acennadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl_fd(char *s, int fd) {
-    ft_putstr_fd(s, fd);
-    ft_putchar_fd('\n', fd);
+void	ft_putendl_fd(char *s, int fd)
+{
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
