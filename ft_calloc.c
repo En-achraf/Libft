@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acennadi <acennadi@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: acennadi <acennadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 11:03:38 by acennadi          #+#    #+#             */
-/*   Updated: 2024/11/01 13:16:38 by acennadi         ###   ########.fr       */
+/*   Updated: 2024/11/06 13:40:35 by acennadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
-	if (size / SIZE_MAX > size)
+	if ((size != 0) && (count > __SIZE_MAX__ / size))
 		return (NULL);
 	ptr = malloc(count * size);
 	if (!ptr)

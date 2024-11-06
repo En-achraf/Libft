@@ -6,7 +6,7 @@
 /*   By: acennadi <acennadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 21:25:27 by acennadi          #+#    #+#             */
-/*   Updated: 2024/11/04 05:44:42 by acennadi         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:15:36 by acennadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int count;
+	int	count;
 
-	count = 0;
 	if (!lst)
 		return (0);
+	count = 0;
 	while (lst)
 	{
 		lst = lst->next;

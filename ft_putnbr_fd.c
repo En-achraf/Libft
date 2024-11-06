@@ -6,7 +6,7 @@
 /*   By: acennadi <acennadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 05:37:14 by acennadi          #+#    #+#             */
-/*   Updated: 2024/11/04 18:06:56 by acennadi         ###   ########.fr       */
+/*   Updated: 2024/11/06 11:49:27 by acennadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putnbr_fd(int n, int fd)
 	nb = n;
 	if (n < 0)
 	{
-		ft_putchar_fd('-', 1);
+		ft_putchar_fd('-', fd);
 		nb = -nb;
 	}
 	if (nb < 10)

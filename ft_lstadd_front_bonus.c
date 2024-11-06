@@ -6,7 +6,7 @@
 /*   By: acennadi <acennadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 21:25:19 by acennadi          #+#    #+#             */
-/*   Updated: 2024/11/04 05:44:18 by acennadi         ###   ########.fr       */
+/*   Updated: 2024/11/05 17:40:33 by acennadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (!lst)
+	if (!lst || !new)
 		return ;
 	new->next = *lst;
 	*lst = new;

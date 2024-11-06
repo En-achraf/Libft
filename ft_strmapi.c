@@ -6,7 +6,7 @@
 /*   By: acennadi <acennadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 14:27:26 by acennadi          #+#    #+#             */
-/*   Updated: 2024/11/04 18:16:52 by acennadi         ###   ########.fr       */
+/*   Updated: 2024/11/05 14:06:57 by acennadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s || !f)
 		return (NULL);
 	str = malloc(sizeof(char) * ft_strlen(s) + 1);
+	if (str == NULL)
+		return (NULL);
 	while (s[i])
 	{
 		str[i] = f(i, s[i]);

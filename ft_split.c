@@ -6,7 +6,7 @@
 /*   By: acennadi <acennadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 21:35:42 by acennadi          #+#    #+#             */
-/*   Updated: 2024/11/04 18:09:10 by acennadi         ###   ########.fr       */
+/*   Updated: 2024/11/06 13:50:54 by acennadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static int	count_word(const char *s, char c)
 
 static char	**clean(char **arr, int i)
 {
-	while (i > 0)
+	while (i >= 0)
 		free(arr[i--]);
 	free(arr);
 	return (NULL);

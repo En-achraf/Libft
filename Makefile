@@ -33,3 +33,6 @@ fclean : clean
 	@rm -rf $(NAME)
 
 re : fclean all
+
+.PHONY : all re fclean clean bonus
+.SECONDARY : $(OBJECTS) $(BONUSOBJECT)
