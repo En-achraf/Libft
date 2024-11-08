@@ -6,7 +6,7 @@
 /*   By: acennadi <acennadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 21:25:47 by acennadi          #+#    #+#             */
-/*   Updated: 2024/11/04 18:15:00 by acennadi         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:04:57 by acennadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	src_len = ft_strlen(src);
+	if (dstsize == 0 || dst == NULL)
+		return (src_len);
 	dst_len = ft_strlen(dst);
 	i = 0;
 	if (dstsize <= dst_len)
