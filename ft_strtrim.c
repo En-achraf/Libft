@@ -6,7 +6,7 @@
 /*   By: acennadi <acennadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 18:54:32 by acennadi          #+#    #+#             */
-/*   Updated: 2024/11/04 18:24:28 by acennadi         ###   ########.fr       */
+/*   Updated: 2024/11/08 15:46:33 by acennadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	while (end > start)
 	{
-		str[i] = s1[start];
-		i++;
-		start++;
+		str[i++] = s1[start++];
 	}
 	str[i] = '\0';
 	return (str);
