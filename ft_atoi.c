@@ -6,15 +6,15 @@
 /*   By: acennadi <acennadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 10:36:32 by acennadi          #+#    #+#             */
-/*   Updated: 2024/11/07 16:41:25 by acennadi         ###   ########.fr       */
+/*   Updated: 2024/11/09 13:37:46 by acennadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(const char *str)
 {
-	long	res;
-	int		sign;
-	int		i;
+	int	res;
+	int	sign;
+	int	i;
 
 	i = 0;
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
