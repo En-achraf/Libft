@@ -6,7 +6,7 @@
 /*   By: acennadi <acennadi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 12:53:50 by acennadi          #+#    #+#             */
-/*   Updated: 2024/11/07 15:22:06 by acennadi         ###   ########.fr       */
+/*   Updated: 2024/11/09 18:05:55 by acennadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_node;
 	void	*ptr;
 
-	new_list = NULL;
-	ptr = NULL;
 	if (!lst || !f || !del)
 		return (NULL);
+	new_list = NULL;
+	ptr = NULL;
 	while (lst)
 	{
 		ptr = f(lst->content);
